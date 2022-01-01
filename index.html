@@ -2,25 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="style/style.css" rel="stylesheet">
+  <title>Calculator app</title>
 </head>
 <body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <script src="js/index.js" type="module"></script>
+  <main class="calc">
+    <section class="calc__header">
+      <h1 class="title">calc</h1>
+      <p>THEME</p>
+      <div class="toogle"> 
+        <div class="toogle__labels"><div>1</div><div>2</div><div>3</div></div>
+        <input type="range" name="themes" min="1" step="1" class="toggle__slider" max="3" value="1">
+      </div>
+    </section>
+    <section class="calc__screen">
+      <div class="calc__screen--sol" id="calc__screen--sol"></div>
+    </section>
+    <section class="calc__keypad">
+      <div class="keypad__btns">         
+        <button class="btn--key num">7</button>
+        <button class="btn--key num">8</button>
+        <button class="btn--key num">9</button>
+        <button class="btn--key btn--action btn-del">DEL</button>
+        <button class="btn--key num">4</button>
+        <button class="btn--key num">5</button>
+        <button class="btn--key num">6</button>
+        <button class="btn--key op">+</button>  
+        <button class="btn--key num">1</button>
+        <button class="btn--key num">2</button>
+        <button class="btn--key num">3</button>
+        <button class="btn--key op">-</button>
+        <button class="btn--key num">.</button>
+        <button class="btn--key num" >0</button>
+        <button class="btn--key op">/</button>
+        <button class="btn--key op">X</button>
+        <button class="btn--key btn--action btn-reset btn--grow">RESET</button>
+        <button class="btn--key btn--solution btn--grow solve">=</button>
+      </div>  
+    </section>
+  </main>
+  <div class="starwars">
+    <h3>Star Wars: </h3>
+    <p class="starwars--text"></p>
   </div>
 </body>
 </html>
